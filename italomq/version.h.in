@@ -1,0 +1,5 @@
+namespace italomq {
+constexpr int VERSION_MAJOR = @ITALOMQ_VERSION_MAJOR@;
+constexpr int VERSION_MINOR = @ITALOMQ_VERSION_MINOR@;
+constexpr int VERSION_PATCH = @ITALOMQ_VERSION_PATCH@;
+}

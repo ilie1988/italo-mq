@@ -1,10 +1,10 @@
 #include "common.h"
 
-using namespace lokimq;
+using namespace italomq;
 
 TEST_CASE("injected external commands", "[injected]") {
     std::string listen = random_localhost();
-    LokiMQ server{
+    ItaloMQ server{
         "", "", // generate ephemeral keys
         false, // not a service node
         [](auto) { return ""; },
@@ -24,7 +24,7 @@ TEST_CASE("injected external commands", "[injected]") {
 
     server.start();
 
-    LokiMQ client{get_logger("C» "), LogLevel::trace};
+    ItaloMQ client{get_logger("C» "), LogLevel::trace};
     client.start();
 
     std::atomic<bool> got{false};
